@@ -1,0 +1,63 @@
+
+# Instrucciones: Cómo Hacer un Commit y Crear un Release
+
+## 1. Hacer un Commit
+Sigue estos pasos para guardar los cambios en tu repositorio local:
+
+### Paso 1: Verificar el estado del repositorio
+Usa el siguiente comando para ver qué archivos han cambiado o necesitan ser guardados:
+```bash
+git status
+```
+
+### Paso 2: Agregar los archivos al área de preparación (stage)
+Para agregar un archivo específico:
+```bash
+git add nombre_del_archivo
+```
+Para agregar todos los archivos modificados:
+```bash
+git add .
+```
+
+### Paso 3: Hacer el commit
+Crea un commit con un mensaje que describa los cambios realizados:
+```bash
+git commit -m "Descripción clara de los cambios"
+```
+
+### Paso 4: Verificar el commit
+Asegúrate de que el commit se guardó correctamente con:
+```bash
+git log --oneline
+```
+
+### Paso 5: Subir los cambios (opcional)
+Si deseas subir los cambios a GitHub, usa:
+```bash
+git push origin main
+```
+
+---
+
+## 2. Crear un Release
+Sigue estos pasos para crear un release en tu repositorio de GitHub:
+
+### Paso 1: Crear un tag
+Asigna un tag a tu commit para identificar la versión:
+```bash
+git tag -a v1.0 -m "Descripción del release"
+```
+
+### Paso 2: Subir el tag a GitHub
+Envía el tag al repositorio remoto:
+```bash
+git push origin v1.0
+```
+
+### Paso 3: Crear el release en GitHub
+1. Ve a tu repositorio en GitHub.
+2. Haz clic en 'Releases' en la barra de menú.
+3. Selecciona 'Draft a new release'.
+4. Elige el tag (por ejemplo, `v1.0`) y añade un título y descripción.
+5. Haz clic en 'Publish release'.
